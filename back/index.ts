@@ -20,7 +20,7 @@ app.use('/',deliveryRouter)
 app.get(
     "/",
     async (req: Request, res: Response): Promise<Response> => {
-        return res.send('API bots and deliveries');
+        return res.send('API Bots and Deliveries');
     }
 );
 
