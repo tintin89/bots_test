@@ -2,6 +2,7 @@ import express, { Application, Request, Response } from "express";
 import {getDeliveries} from './src/controllers/delivery';
 import dotenv from 'dotenv';
 import deliveryRouter from './src/routes/delivery';
+import botRouter from "./src/routes/bot";
 import cors from 'cors';
 
 dotenv.config();
@@ -13,7 +14,8 @@ const port = process.env.PORT;
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
-app.use('/',deliveryRouter)
+app.use('/',deliveryRouter);
+app.use('/',botRouter);
 
 
 //Main route
