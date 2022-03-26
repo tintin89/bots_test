@@ -1,5 +1,4 @@
 import express, { Application, Request, Response } from "express";
-import {getDeliveries} from './src/controllers/delivery';
 import dotenv from 'dotenv';
 import deliveryRouter from './src/routes/delivery';
 import botRouter from "./src/routes/bot";
